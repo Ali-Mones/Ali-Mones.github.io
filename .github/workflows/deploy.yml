@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
+      - run: |
+          git config user.name Ali-Mones
+          git config user.email aliishomie@outlook.com
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
