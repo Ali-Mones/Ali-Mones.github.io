@@ -1,3 +1,9 @@
 site_name: Ali Mones - CV
 theme:
   name: material
+nav:
+  - Home: index.md
+  - Education: education.md
+  - Experience: experience.md
+  - Projects: projects.md
+  - Skills: skills.md
