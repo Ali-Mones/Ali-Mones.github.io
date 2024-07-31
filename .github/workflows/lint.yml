@@ -1,3 +1,4 @@
+---
 name: lint
 
 on:
@@ -7,20 +8,19 @@ on:
 
 jobs:
   lint-html:
-    runs-on: ubutnu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "latest"
-          cache: "npm"
-          
+
       - name: install prettier
         run: npm install --save-dev --save-exact prettier
 
       - name: lint html files
         run: npx prettier . --write
-        
+
   lint-yaml:
     runs-on: ubuntu-latest
     steps:
@@ -28,10 +28,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          
+
       - name: Install yamllint
         run: pip install yamllint
-      
+
       - name: Lint yaml files
         run: yamllint .
-    
